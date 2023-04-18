@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Button from './components/Button'
+import { TfiBell, TfiAlarmClock, TfiAgenda } from "react-icons/tfi";
+import ButtonPage from './pages/ButtonPages';
+import Accordion from './components/Accordion';
 
-function App() {
+
+const App = () => {
+    const items = [
+        {
+            id:'123',
+            label:'this is fast and furious',
+            content:'racing is key and all the freaks with good music at one place'
+
+        },
+        {
+            id:'1253',
+            label:'this is fast and furious',
+            content:'racing is key and all the freaks with good music at one place'
+            
+        }
+        ,{
+            id:'1233',
+            label:'this is fast and furious',
+            content:'racing is key and all the freaks with good music at one place'
+            
+        }
+    ]
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {/* <ButtonPage></ButtonPage> */}
+        <Accordion items={items}></Accordion>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
